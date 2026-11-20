@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>시드니 신혼여행</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap">
 <style>
 /* Layout: 탑승권 스타일 항공 카드 + 9일 숙박 스트립 + 카테고리 필터로 걸러지는 일자별 타임라인.
    색: 잉크 네이비 바탕에 시드니 페리 옐로 포인트 */
@@ -13,7 +14,7 @@
   --bg:#eef2f4; --paper:#ffffff; --ink:#0a2233; --muted:#5a6f7c; --line:#d3dde3;
   --sun:#f5b700; --sun-ink:#3a2b00; --sea:#0f6b8c; --sea-soft:#dcedf3; --hot:#d9482b;
   --c-항공:#0f6b8c; --c-숙소:#6a4fb3; --c-휴양:#1d8a6a; --c-맛집:#d9482b; --c-러닝:#b07a00; --c-준비:#5a6f7c;
-  --display:'Black Han Sans','Noto Sans KR',sans-serif; --body:'Noto Sans KR',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --display:'Pretendard Variable',Pretendard,'Noto Sans KR',system-ui,sans-serif; --body:'Pretendard Variable',Pretendard,'Noto Sans KR',system-ui,sans-serif; --mono:'Pretendard Variable',Pretendard,'Noto Sans KR',system-ui,sans-serif;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#07151f; --paper:#0f2433; --ink:#e8f0f4; --muted:#8ea5b2; --line:#22394a;
@@ -25,17 +26,17 @@
   --c-항공:#5cc2e3; --c-숙소:#a996f0; --c-휴양:#4fd1a5; --c-맛집:#ff7a5c; --c-러닝:#ffc933; --c-준비:#8ea5b2; color-scheme:dark}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:84px}
-body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.65;margin:0;
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.65;letter-spacing:-.01em;font-variant-numeric:tabular-nums;margin:0;
   padding-block:0 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 main{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:44px}
 h1,h2,h3{margin:0;text-wrap:balance}
-h2{font-family:var(--display);font-weight:400;font-size:26px;margin-bottom:16px}
+h2{font-family:var(--display);font-weight:800;font-size:26px;margin-bottom:16px}
 .mono{font-family:var(--mono)}
 
 /* hero */
 .hero{padding-top:44px}
 .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.18em;color:var(--muted);margin:0 0 10px}
-h1{font-family:var(--display);font-weight:400;font-size:clamp(44px,12vw,92px);line-height:1.02;letter-spacing:-.01em}
+h1{font-family:var(--display);font-weight:800;letter-spacing:-.04em;font-size:clamp(44px,12vw,92px);line-height:1.02;letter-spacing:-.01em}
 h1 em{font-style:normal;background:linear-gradient(transparent 62%,var(--sun) 62% 92%,transparent 92%)}
 .lead{color:var(--muted);margin:14px 0 0;max-width:46ch}
 .live{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:12px;margin-top:26px}
@@ -74,19 +75,18 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .pass::after{bottom:-11px;clip-path:inset(0 0 50% 0)}
 .pass .top{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--muted)}
 .pass .od{display:flex;align-items:center;gap:12px;margin:10px 0 14px}
-.pass .od b{font-family:var(--display);font-weight:400;font-size:44px;line-height:1}
+.pass .od b{font-family:var(--display);font-weight:800;font-size:44px;line-height:1}
 .pass .od span{flex:1;border-top:2px solid var(--ink);position:relative;min-width:24px}
 .pass .od span::after{content:"";position:absolute;right:-1px;top:-6px;border:5px solid transparent;border-left:8px solid var(--ink);border-right:0}
 .pass dl{margin:0;display:grid;grid-template-columns:repeat(2,auto);gap:8px 20px;justify-content:start}
 .pass dt{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--muted)}
 .pass dd{margin:0;font-weight:700;font-size:15px}
 .stub .seat{font-family:var(--mono);font-size:11px;color:var(--muted)}
-.stub .seat b{display:block;font-family:var(--display);font-weight:400;font-size:34px;color:var(--ink);line-height:1.1}
-.bars{height:34px;background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 4px,var(--ink) 4px 5px,transparent 5px 9px,var(--ink) 9px 12px,transparent 12px 14px);opacity:.85;border-radius:2px}
+.stub .seat b{display:block;font-family:var(--display);font-weight:800;font-size:34px;color:var(--ink);line-height:1.1}
 @media (max-width:560px){
   .live{grid-template-columns:1fr 1fr}.live .sun{grid-column:1/-1}
   .pass{grid-template-columns:1fr}.pass .stub{border-left:0;border-top:2px dashed var(--line);flex-direction:row;align-items:center}
-  .pass::before,.pass::after{display:none}.bars{flex:1}
+  .pass::before,.pass::after{display:none}
 }
 
 /* stay strip */
@@ -110,7 +110,7 @@ dl.kv dt{color:var(--muted)} dl.kv dd{margin:0;min-width:0;overflow-wrap:anywher
 /* timeline */
 .day{display:grid;grid-template-columns:96px 1fr;gap:18px;padding:22px 0;border-top:1px solid var(--line)}
 .day:first-of-type{border-top:0}
-.dt b{display:block;font-family:var(--display);font-weight:400;font-size:40px;line-height:1}
+.dt b{display:block;font-family:var(--display);font-weight:800;font-size:40px;line-height:1}
 .dt span{font-family:var(--mono);font-size:12px;color:var(--muted)}
 .day h3{font-size:18px;margin-bottom:8px}
 .sunline{font-family:var(--mono);font-size:11px;color:var(--muted);margin:-2px 0 8px}
@@ -177,7 +177,7 @@ footer{color:var(--muted);font-size:12px}
             <div><dt>FLIGHT TIME</dt><dd>약 10시간 20분</dd></div>
           </dl>
         </div>
-        <div class="stub"><div class="seat">SEAT<b>37F</b>사전 구매 완료</div><div class="bars"></div></div>
+        <div class="stub"><div class="seat">SEAT<b>37F</b>사전 구매 완료</div></div>
       </article>
       <article class="pass">
         <div class="main">
@@ -190,7 +190,7 @@ footer{color:var(--muted);font-size:12px}
             <div><dt>FLIGHT TIME</dt><dd>약 10시간 40분</dd></div>
           </dl>
         </div>
-        <div class="stub"><div class="seat">SEAT<b>--</b>좌석 지정 필요</div><div class="bars"></div></div>
+        <div class="stub"><div class="seat">SEAT<b>--</b>좌석 지정 필요</div></div>
       </article>
     </div>
   </section>
