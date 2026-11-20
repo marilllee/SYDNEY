@@ -9,21 +9,21 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap">
 <style>
 /* Layout: 탑승권 스타일 항공 카드 + 9일 숙박 스트립 + 카테고리 필터로 걸러지는 일자별 타임라인.
-   색: 잉크 네이비 바탕에 시드니 페리 옐로 포인트 */
+   색: 터쿼이즈 바다 + 유칼립투스 세이지. 글자는 진한 청록 */
 :root{
-  --bg:#eef2f4; --paper:#ffffff; --ink:#0a2233; --muted:#5a6f7c; --line:#d3dde3;
-  --sun:#f5b700; --sun-ink:#3a2b00; --sea:#0f6b8c; --sea-soft:#dcedf3; --hot:#d9482b;
-  --c-항공:#0f6b8c; --c-숙소:#6a4fb3; --c-휴양:#1d8a6a; --c-맛집:#d9482b; --c-러닝:#b07a00; --c-준비:#5a6f7c;
+  --bg:#edf3ef; --paper:#ffffff; --ink:#0d3b3c; --muted:#58706c; --line:#d2e0da;
+  --sun:#a9c7a0; --sun-ink:#173d2c; --sea:#0e8f94; --sea-soft:#d8eeee; --hot:#d9506a;
+  --c-항공:#0e8f94; --c-숙소:#3f6fb0; --c-휴양:#5f8a5a; --c-맛집:#d9506a; --c-러닝:#b0683a; --c-준비:#6b7f7c;
   --display:'Pretendard Variable',Pretendard,'Noto Sans KR',system-ui,sans-serif; --body:'Pretendard Variable',Pretendard,'Noto Sans KR',system-ui,sans-serif; --mono:'Pretendard Variable',Pretendard,'Noto Sans KR',system-ui,sans-serif;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#07151f; --paper:#0f2433; --ink:#e8f0f4; --muted:#8ea5b2; --line:#22394a;
-  --sun:#ffc933; --sun-ink:#2a1f00; --sea:#5cc2e3; --sea-soft:#12384a; --hot:#ff7a5c;
-  --c-항공:#5cc2e3; --c-숙소:#a996f0; --c-휴양:#4fd1a5; --c-맛집:#ff7a5c; --c-러닝:#ffc933; --c-준비:#8ea5b2; color-scheme:dark}}
+  --bg:#0a1f1f; --paper:#112e2d; --ink:#e4f2ee; --muted:#8fb0aa; --line:#24443f;
+  --sun:#a9c7a0; --sun-ink:#12301f; --sea:#4fd0d0; --sea-soft:#134240; --hot:#ff8aa0;
+  --c-항공:#4fd0d0; --c-숙소:#8fb2ee; --c-휴양:#9dc896; --c-맛집:#ff8aa0; --c-러닝:#e8a176; --c-준비:#8fb0aa; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#07151f; --paper:#0f2433; --ink:#e8f0f4; --muted:#8ea5b2; --line:#22394a;
-  --sun:#ffc933; --sun-ink:#2a1f00; --sea:#5cc2e3; --sea-soft:#12384a; --hot:#ff7a5c;
-  --c-항공:#5cc2e3; --c-숙소:#a996f0; --c-휴양:#4fd1a5; --c-맛집:#ff7a5c; --c-러닝:#ffc933; --c-준비:#8ea5b2; color-scheme:dark}
+  --bg:#0a1f1f; --paper:#112e2d; --ink:#e4f2ee; --muted:#8fb0aa; --line:#24443f;
+  --sun:#a9c7a0; --sun-ink:#12301f; --sea:#4fd0d0; --sea-soft:#134240; --hot:#ff8aa0;
+  --c-항공:#4fd0d0; --c-숙소:#8fb2ee; --c-휴양:#9dc896; --c-맛집:#ff8aa0; --c-러닝:#e8a176; --c-준비:#8fb0aa; color-scheme:dark}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:84px}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.65;letter-spacing:-.01em;font-variant-numeric:tabular-nums;margin:0;
@@ -36,7 +36,7 @@ h2{font-family:var(--display);font-weight:800;font-size:26px;margin-bottom:16px}
 /* hero */
 .hero{padding-top:44px}
 .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.18em;color:var(--muted);margin:0 0 10px}
-h1{font-family:var(--display);font-weight:800;letter-spacing:-.04em;font-size:clamp(44px,12vw,92px);line-height:1.02;letter-spacing:-.01em}
+h1{font-family:var(--display);font-weight:800;letter-spacing:-.04em;font-size:clamp(28px,8.6vw,72px);line-height:1.1;white-space:nowrap;letter-spacing:-.01em}
 h1 em{font-style:normal;background:linear-gradient(transparent 62%,var(--sun) 62% 92%,transparent 92%)}
 .lead{color:var(--muted);margin:14px 0 0;max-width:46ch}
 .live{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:12px;margin-top:26px}
@@ -137,7 +137,7 @@ footer{color:var(--muted);font-size:12px}
 <main>
   <header class="hero">
     <p class="eyebrow">ICN → SYD · 2027.03.11 – 03.19</p>
-    <h1>시드니,<br><em>둘이서</em></h1>
+    <h1>시드니 <em>신혼여행</em> ❤️</h1>
     <p class="lead">7박 8일 신혼여행. 바다 보고, 잘 먹고, 아침엔 조금 달리는 일정입니다.</p>
 
     <div class="live">
